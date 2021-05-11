@@ -13,7 +13,7 @@ public class LoopFor04 {
     * @Description //TODO 
     * @Date 11:07 2021-05-11
     * @Param 
-    * @return  
+    * @return
     */
     public static void main(String[] args) {
         for (int i = 0; i <= 10; i--) {
