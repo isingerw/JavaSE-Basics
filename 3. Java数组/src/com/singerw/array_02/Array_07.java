@@ -11,6 +11,10 @@ public class Array_07 {
         int smaller = 0;
         // 可以和for循环结合在一起
         int[] array = {1, 2, 23, 51, 18, 502, 41};
+
+
+
+
         for (int i = 0; i < array.length - 1; i++) {
             // 自定义一个smaLler samller为最小值
             smaller = i;
