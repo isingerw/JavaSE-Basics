@@ -1,4 +1,4 @@
-package com.singerw.array_01;
+package com.singerw.array_02;
 
 import java.util.Scanner;
 
