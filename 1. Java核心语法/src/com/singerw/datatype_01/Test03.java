@@ -1,4 +1,4 @@
-package com.singerw.day02;
+package com.singerw.datatype_01;
 
 public class Test03 {
 

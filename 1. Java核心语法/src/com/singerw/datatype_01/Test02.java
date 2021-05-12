@@ -1,4 +1,4 @@
-package com.singerw.day02;
+package com.singerw.datatype_01;
 
 //��ɫ������->�������
 // The public type Test00002 must be defined in its own file

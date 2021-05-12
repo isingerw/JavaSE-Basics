@@ -1,4 +1,4 @@
-package com.singerw.day02;
+package com.singerw.datatype_01;
 
 //class Test01 ����һ���࣬ǰ����public���Ǳ����
 //��д�Ļ�����������������ļ������Բ�ͬ

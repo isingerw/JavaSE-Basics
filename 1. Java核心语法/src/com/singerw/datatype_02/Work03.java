@@ -1,4 +1,4 @@
-package com.singerw.day03;
+package com.singerw.datatype_02;
 
 import java.util.Scanner;
 

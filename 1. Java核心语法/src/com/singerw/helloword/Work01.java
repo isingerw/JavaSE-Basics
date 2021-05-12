@@ -1,4 +1,4 @@
-package com.singerw.day01;
+package com.singerw.helloword;
 
 public class Work01 {
     /*

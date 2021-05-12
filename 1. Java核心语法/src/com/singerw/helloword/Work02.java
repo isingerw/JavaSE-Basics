@@ -1,4 +1,4 @@
-package com.singerw.day01;
+package com.singerw.helloword;
 /**
 * @Author Singerw_辛格 
 * @Description //TODO 
