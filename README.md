@@ -9,7 +9,14 @@
 |     |  ├─com
 |     |  |  ├─singerw
 |     |  |  |    ├─bubble_sort
-|     |  |  |    |      └Array_Loop_Bubble_Sort_01.java
+|     |  |  |    |      ├─Array_Loop_Bubble_Sort_01.java
+|     |  |  |    |      └Array_Loop_Insertion_Sort_02.java
+|     |  |  |    ├─array_03
+|     |  |  |    |    ├─ArrayYangHuiSanJiao.java
+|     |  |  |    |    ├─Array_01.java
+|     |  |  |    |    ├─Array_02.java
+|     |  |  |    |    ├─Array_03.java
+|     |  |  |    |    └TestCalc.java
 |     |  |  |    ├─array_02
 |     |  |  |    |    ├─Array_04.java
 |     |  |  |    |    ├─Array_05.java
@@ -21,6 +28,8 @@
 |     |  |  |    |    └Array_03.java
 |     |  |  |    ├─ArrayTask
 |     |  |  |    |     ├─ArrayTaskClass.java
+|     |  |  |    |     ├─ArrayTaskFibonacci.java
+|     |  |  |    |     ├─ArrayTaskNumbers.java
 |     |  |  |    |     └ArrayTaskStudent.java
 ├─2. Java流程控制
 |      ├─src
