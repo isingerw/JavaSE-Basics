@@ -30,14 +30,14 @@ public class ArrayTaskClass {
         for (int i = 0; i < nameArray.length; i++) {
             // 条件比较，字符串类型用equals
             // 如果find的值等于数组中i的值，则说明成功找到
-            if (nameArray[i].equals(find)) {
+            if (find.equals(nameArray[i])) {
                 position = i;
                 System.out.println("找到了学生：" + find + ",该学生的索引位置是" + position);
             }
-            // 如果find的值等于-1，则说明没找到
-            if (position == -1) {
-                System.out.println("没找到：" + find + "，正在尝试下一次寻找");
-            }
         }
+        // 如果find的值等于-1，则说明没找到
+        if (position == -1) {
+            System.out.println("没找到：" + find + "，正在尝试下一次寻找");
     }
+}
 }
