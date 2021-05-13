@@ -23,6 +23,7 @@ public class Array_Loop_Bubble_Sort_01 {
                 }
             }
         }
+
         // 输出结果
         for(int n:array){
             System.out.println(n);
