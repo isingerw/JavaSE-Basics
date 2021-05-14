@@ -1,4 +1,4 @@
-package com.singerw.day1;
+package com.singerw.day08;
 
 public class CalcAdd {
 
