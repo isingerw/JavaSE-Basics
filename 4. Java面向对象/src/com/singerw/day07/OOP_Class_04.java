@@ -1,4 +1,4 @@
-package com.singerw.task;
+package com.singerw.day07;
 
 /**
  * @ClassName: OOP_Class_04
@@ -30,7 +30,6 @@ public class OOP_Class_04 {
 
     /**
      * (无参数，有返回值)
-     *
      * @param
      * @return
      */

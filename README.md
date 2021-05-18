@@ -4,20 +4,43 @@
 ## 代码目录介绍
 
 ```text
-
 ├─4. Java面向对象
 |      ├─src
 |      |  ├─com
 |      |  |  ├─singerw
-|      |  |  |    ├─task
-|      |  |  |    |  ├─OOP_Class_04.java
-|      |  |  |    |  └TestClass_04.java
+|      |  |  |    ├─day10
+|      |  |  |    |   ├─A.java
+|      |  |  |    |   ├─Animal.java
+|      |  |  |    |   ├─AnimalTest.java
+|      |  |  |    |   ├─Employee.java
+|      |  |  |    |   ├─EmployeeHomeWork.java
+|      |  |  |    |   ├─Father.java
+|      |  |  |    |   ├─Reivew03.java
+|      |  |  |    |   ├─Review01.java
+|      |  |  |    |   ├─Review02.java
+|      |  |  |    |   ├─Son.java
+|      |  |  |    |   ├─Teacher.java
+|      |  |  |    |   ├─TeacherTest.java
+|      |  |  |    |   └TestA.java
+|      |  |  |    ├─day09
+|      |  |  |    |   └Method_03.java
 |      |  |  |    ├─day08
 |      |  |  |    |   ├─Calc.java
 |      |  |  |    |   ├─CalcAdd.java
 |      |  |  |    |   ├─OOP_Class_Method_01.java
 |      |  |  |    |   ├─TestAdd.java
 |      |  |  |    |   └TestCalc.java
+|      |  |  |    ├─day07
+|      |  |  |    |   ├─OOP_Class_04.java
+|      |  |  |    |   └TestClass_04.java
+|      |  |  |    ├─case10
+|      |  |  |    |   ├─Company.java
+|      |  |  |    |   ├─Dancer.java
+|      |  |  |    |   ├─Rapper.java
+|      |  |  |    |   ├─Singer.java
+|      |  |  |    |   ├─Star.java
+|      |  |  |    |   ├─TalkShower.java
+|      |  |  |    |   └TestCompany.java
 ├─3. Java数组
 |     ├─src
 |     |  ├─com
@@ -49,7 +72,7 @@
 |      ├─src
 |      |  ├─com
 |      |  |  ├─singerw
-|      |  |  |    ├─loop
+|      |  |  |    ├─loop        循环结构
 |      |  |  |    |  ├─Break.java
 |      |  |  |    |  ├─Continue_01.java
 |      |  |  |    |  ├─Continue_02.java
@@ -69,7 +92,7 @@
 |      |  |  |    |  ├─While_03_TaoEr.java
 |      |  |  |    |  ├─While_04_BallEr.java
 |      |  |  |    |  └While_05_BallEr.java
-|      |  |  |    ├─condition
+|      |  |  |    ├─condition   条件分支
 |      |  |  |    |     ├─If_01.java
 |      |  |  |    |     ├─If_02.java
 |      |  |  |    |     ├─If_03.java
@@ -82,11 +105,11 @@
 |      ├─src
 |      |  ├─com
 |      |  |  ├─singerw
-|      |  |  |    ├─helloword
+|      |  |  |    ├─helloword       HelloWord
 |      |  |  |    |     ├─HelloWord.java
 |      |  |  |    |     ├─Work01.java
 |      |  |  |    |     └Work02.java
-|      |  |  |    ├─datatype_02
+|      |  |  |    ├─datatype_02     数据类型
 |      |  |  |    |      ├─Review01.java
 |      |  |  |    |      ├─Review02.java
 |      |  |  |    |      ├─Review03.java
@@ -94,8 +117,8 @@
 |      |  |  |    |      ├─Work02.java
 |      |  |  |    |      ├─Work03.java
 |      |  |  |    |      └Work04.java
-|      |  |  |    ├─datatype_01
-|      |  |  |    |      ├─A.java
+|      |  |  |    ├─datatype_01     数据类型
+|      |  |  |    |      ├─A.java       
 |      |  |  |    |      ├─Introduction.java
 |      |  |  |    |      ├─Test01.java
 |      |  |  |    |      ├─Test02.java

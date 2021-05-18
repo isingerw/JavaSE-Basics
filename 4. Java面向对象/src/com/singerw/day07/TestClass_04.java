@@ -1,4 +1,4 @@
-package com.singerw.task;
+package com.singerw.day07;
 
 /**
  * @ClassName: TestClass_04
