@@ -7,32 +7,24 @@ package com.singerw.day08;
  * @Date 2021-05-14 15:09
  */
 public class Calc {
+    // a b 称之为参数，是方法执行的必备条件
+    // 不能确定a b的值，所以a b为形式参数
     /**
-     * (求和运算)
-     *
-     * @param
-     * @param
+     * (这里用一句话描述这个构造函数的作用)
+     * @param a
+     * @param b
+     * @Return
      */
     public void add(int a, int b) {
         System.out.println("和为：" + (a + b));
     }
 
-    /**
-     * (求差运算)
-     *
-     * @param a
-     * @param b
-     */
+
     public void sub(int a, int b) {
         System.out.println("差为：" + (a - b));
     }
 
-    /**
-     * (乘积运算)
-     *
-     * @param
-     * @param
-     */
+    // 乘法运算
     public int mul(int a, int b) {
         int sum = a * b;
         // return 从方法中返回结果给调用
@@ -40,10 +32,9 @@ public class Calc {
     }
 
     /**
-     * (这里用一句话描述这个构造函数的作用)
      *
-     * @param
-     * @Return
+     * @param a
+     * @param b
      */
     public void swap(int a, int b) {
         int t = a;

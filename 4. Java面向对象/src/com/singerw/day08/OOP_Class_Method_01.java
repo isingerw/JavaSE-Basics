@@ -3,24 +3,22 @@ package com.singerw.day08;
 import java.util.Scanner;
 
 public class OOP_Class_Method_01 {
-    /**
-    * @Author Singerw_辛格
-    * @Description //TODO
-    * @Date 13:55 2021-05-14
-    */
+
     public static void main(String[] args) {
         //调用method01
-
+        // 对象名.方法名（）
+        OOP_Class_Method_01 oop_class_method_01 = new OOP_Class_Method_01();
+        oop_class_method_01.method01();
 
     }
-    /**
-    * @Author Singerw_辛格
-    * 定义method01方法
-    * @Date 13:55 2021-05-14
-    */
-    public  void method01() {
-        Scanner input = new Scanner(System.in);
 
+    /**
+     * @Author Singerw_辛格
+     * 定义method01方法
+     * @Date 13:55 2021-05-14
+     */
+    public void method01() {
+        Scanner input = new Scanner(System.in);
         // 定义数组，for循环完成控制台输入
         int[] numberArray = new int[10];
         for (int i = 0; i < numberArray.length; i++) {

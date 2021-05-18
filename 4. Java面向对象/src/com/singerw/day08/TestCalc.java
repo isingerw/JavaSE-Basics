@@ -14,6 +14,8 @@ public class TestCalc {
         // 调用方法
         calc.add(10, 2);
         calc.sub(2, 6);
+
+
         // 如果方法有返回值，要接收mul的返回值 定义一个合适的类型接收返回值
         // 函数 和 方法是同一个东西
         int result = calc.mul(6, 5);
