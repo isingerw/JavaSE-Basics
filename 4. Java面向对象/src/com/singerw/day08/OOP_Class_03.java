@@ -11,30 +11,31 @@ import com.sun.deploy.pings.Pings;
 public class OOP_Class_03 {
     public static void main(String[] args) {
         Pig pig = new Pig();
-        pig.show();
         pig.show1();
         pig.show2();
+        pig.show3();
     }
 }
 
 class Pig{
+    // 可以在任何实例方法中使用
     String name = "佩琪";
 
-    public void show(){
-        // name只能在这个方法内使用，如果外部有命名，
+    public void show1(){
+        // name只能在这个方法内使用，如果外部有同名，此时引用为就近原则；
         String name = "八戒";
-        // name是八戒呢还是八戒呢
-        System.out.println(name);
+        // 输出八戒
+        System.out.println("show1:"+name);
     }
 
-    public void show1(){
-        // name是佩奇还是佩奇呐？
-        System.out.println(name);
-    }
     public void show2(){
+        // name 输出佩奇
+        System.out.println("show2:"+name);
+    }
+
+    public void show3(){
         String name = "猪猪侠";
-        System.out.println(name);
         // this 为代称 ；指当前这个类的对象。
-        System.out.println(this.name);
+        System.out.println("show3:"+this.name);
     }
 }
