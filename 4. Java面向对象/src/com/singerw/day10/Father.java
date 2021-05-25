@@ -1,7 +1,7 @@
 package com.singerw.day10;
 
 public class Father {
-    int n = 100;
+    private int n = 100;
 
     public int getN() {
         return n;
@@ -12,6 +12,6 @@ public class Father {
     }
 
     public void t(){
-        System.out.println(n);
+        System.out.println("father t()");
     }
 }

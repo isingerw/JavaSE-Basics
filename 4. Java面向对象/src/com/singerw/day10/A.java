@@ -2,8 +2,8 @@ package com.singerw.day10;
 
 public class A {
     public A(int p) {
-        System.out.println("A");
     }
+
 }
 
 class B extends A{

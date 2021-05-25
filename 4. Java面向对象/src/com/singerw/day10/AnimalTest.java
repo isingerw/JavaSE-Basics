@@ -26,16 +26,16 @@ public class AnimalTest {
         System.out.println(monkey);
         System.out.println(coder);
 
+        // 子类引用 = 子类对象
         Monkey monkey1 = new Monkey();
         monkey.eat("仙桃");
-
+        // 父类引用 = 父类对象
         Animal animal = new Animal();
         animal.eat("食物");
-
-        Animal ani = new Animal();
-        ani.eat("xiantao");
-
-        //
+        // 父类引用 = 子类对象
+        Animal ani = new Monkey();
+        ani.eat("鲜桃");
+        // 子类引用 = 父类对象
         Monkey mon = (Monkey) new Animal();
         mon.eat("桃儿");
     }
