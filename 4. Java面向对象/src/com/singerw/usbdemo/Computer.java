@@ -1,7 +1,5 @@
 package com.singerw.usbdemo;
 
-import org.jetbrains.annotations.NotNull;
-
 /**
 * @ClassName: Computer
 * @Description: 3 类中有一个方法，方法的参数是接口引用

@@ -9,16 +9,21 @@ public class TestInt {
         // 可以通过引用名.属性和方法
         Integer i = 1;
         i.hashCode();
+        System.out.println(i.hashCode());
 
         // 字符串  ===> 转换为 int
         int n = Integer.parseInt("123");
-
+        System.out.println(n);
         // 装箱
         int j = 1;
         Integer jj = j; // 基本类型可以直接赋值给包装类，这种操作叫 “装箱”
         // 拆箱
         Integer k = new Integer(1);
         int kk = k;  // Integer类型自动转换为-->int包装类型
+
+
+        String str = "ZHANG";
+
     }
 
 

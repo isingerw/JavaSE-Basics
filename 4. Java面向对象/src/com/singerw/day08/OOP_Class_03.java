@@ -1,7 +1,5 @@
 package com.singerw.day08;
 
-import com.sun.deploy.pings.Pings;
-
 /**
 * @ClassName: OOP_Class_03
 * @Description: TODO(这里用一句话描述这个类的作用)

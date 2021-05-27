@@ -1,7 +1,5 @@
 package com.singerw.day09;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
 /**
 * @ClassName: Constructor_Class_09
 * @Description: TODO(这里用一句话描述这个类的作用)
