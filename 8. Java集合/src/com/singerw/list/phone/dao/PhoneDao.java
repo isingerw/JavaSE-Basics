@@ -12,17 +12,16 @@ import java.util.ArrayList;
  */
 public class PhoneDao {
 
-    /**
-     * 集合用来保存phone
-     */
-    private ArrayList<Phonepojo> list = new ArrayList<Phonepojo>();
+
+    private final ArrayList<Phonepojo> list = new ArrayList<Phonepojo>();
 
 
     // Phone
 
     /**
-     * 向集合中添加元素
-     *
+     * @Author CodeSleep
+     * @Description //TODO(向集合中添加元素)
+     * @Date 2021-05-29 0:57
      * @param phone
      * @return
      */
