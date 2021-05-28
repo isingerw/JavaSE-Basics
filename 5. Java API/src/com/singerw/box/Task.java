@@ -10,6 +10,7 @@ public class Task {
         System.out.println(i1.equals(i2));
         System.out.println(i1.equals(i0));
 
+        System.out.println();
         System.out.println("========================");
         // new不同地址比较
         System.out.println(i1 == i2);
