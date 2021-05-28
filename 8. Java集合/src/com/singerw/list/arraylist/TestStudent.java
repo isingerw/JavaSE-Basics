@@ -4,11 +4,12 @@ import java.util.ArrayList;
 
 public class TestStudent {
     /**
-     * @Author CodeSleep
-     * @Description (这里用一句话描述这个方法用来做什么)
-     * @Date 2021-05-29 0:47
-     * @param args
-     */
+    * @Description: //TODO 方法描述
+    * @param: [args]
+    * @return: void
+    * @Author: CodeSleep
+    * @Date: 2021-05-29 2:36
+    */
     public static void main(String[] args) {
         //1-> 数组一旦长度可变.
         //2->提供很多的固定算法。直接调用. 插入，添加到尾部，排序，查找等等
