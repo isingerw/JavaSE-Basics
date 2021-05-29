@@ -1,6 +1,6 @@
-package com.singerw.list.phone.dao;
+package com.singerw.phone.dao;
 
-import com.singerw.list.phone.pojo.Phonepojo;
+import com.singerw.phone.entity.PhoneEntity;
 
 import java.util.ArrayList;
 
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class PhoneDao {
 
 
-    private final ArrayList<Phonepojo> list = new ArrayList<Phonepojo>();
+    private final ArrayList<PhoneEntity> list = new ArrayList<PhoneEntity>();
 
 
     // Phone
@@ -25,7 +25,7 @@ public class PhoneDao {
      * @param phone
      * @return
      */
-    public boolean add(Phonepojo phone) {
+    public boolean add(PhoneEntity phone) {
         // 条件判断
         if (phone == null) {
             return false;
@@ -43,7 +43,7 @@ public class PhoneDao {
     public boolean deletePhoneById(String id) {
         for (int i = 0; i < list.size(); i++) {
             // 集合中的元素，赋值给临时变量pfind
-            Phonepojo find = list.get(i);
+            PhoneEntity find = list.get(i);
             if (id.equals(find.getId())) {
                 list.remove(i);
                 // 如果执行到了return，那么方法结束
@@ -59,10 +59,10 @@ public class PhoneDao {
      * @param id
      * @return
      */
-    public Phonepojo getPhoneById(String id) {
+    public PhoneEntity getPhoneById(String id) {
         for (int i = 0; i < list.size(); i++) {
             // 集合中的元素赋值给临时变量find
-            Phonepojo find = list.get(i);
+            PhoneEntity find = list.get(i);
             if (id.equals(find.getId())) {
                 return find;
             }
@@ -86,7 +86,7 @@ public class PhoneDao {
      *
      * @return
      */
-    public ArrayList<Phonepojo> getPhoneList() {
+    public ArrayList<PhoneEntity> getPhoneList() {
         return list;
     }
 

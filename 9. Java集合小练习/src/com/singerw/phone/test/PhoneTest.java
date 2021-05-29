@@ -1,7 +1,7 @@
-package com.singerw.list.phone.main;
+package com.singerw.phone.test;
 
-import com.singerw.list.phone.dao.PhoneDao;
-import com.singerw.list.phone.pojo.Phonepojo;
+import com.singerw.phone.dao.PhoneDao;
+import com.singerw.phone.entity.PhoneEntity;
 
 import java.util.ArrayList;
 
@@ -15,13 +15,13 @@ public class PhoneTest {
     public static void main(String[] args) {
         // 实例化PhoneDao对象
         PhoneDao phoneDao = new PhoneDao();
-        ArrayList<Phonepojo> list = new ArrayList();
+        ArrayList<PhoneEntity> list = new ArrayList();
         // 编号 价格 型号 品牌
         //String id, String prive, String model, String brand
-        Phonepojo huawei = new Phonepojo("01", "2999", "保时捷", "华为");
-        Phonepojo iphone = new Phonepojo("02", "6800", "iPhone12", "iPhone");
-        Phonepojo xiaomi = new Phonepojo("03", "2999", "小米11", "小米");
-        Phonepojo oppop = new Phonepojo("04", "2999", "R15", "Oppop");
+        PhoneEntity huawei = new PhoneEntity("01", "2999", "保时捷", "华为");
+        PhoneEntity iphone = new PhoneEntity("02", "6800", "iPhone12", "iPhone");
+        PhoneEntity xiaomi = new PhoneEntity("03", "2999", "小米11", "小米");
+        PhoneEntity oppop = new PhoneEntity("04", "2999", "R15", "Oppop");
 
         // 调用add()方法
         // 将 huawei iphone xiaomi oppop添加到集合中

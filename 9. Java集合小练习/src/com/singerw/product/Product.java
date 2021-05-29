@@ -1,4 +1,4 @@
-package com.singerw.list.product;
+package com.singerw.product;
 /**
 * @ClassName: Product
 * @Description: 实现商品信息的增删查改

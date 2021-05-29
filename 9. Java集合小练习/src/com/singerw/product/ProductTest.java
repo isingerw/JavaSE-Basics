@@ -1,4 +1,4 @@
-package com.singerw.list.product;
+package com.singerw.product;
 
 
 import java.util.ArrayList;

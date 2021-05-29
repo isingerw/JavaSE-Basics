@@ -1,4 +1,4 @@
-package com.singerw.list.phone.pojo;
+package com.singerw.phone.entity;
 
 /**
  * @ClassName: Phonepojo
@@ -9,7 +9,7 @@ package com.singerw.list.phone.pojo;
  * 2、phoneDao add,delete,getbyid,getall
  * 3、phonetest 调用四个方法实现增删查改
  */
-public class Phonepojo {
+public class PhoneEntity {
     private String id;
     private String prive;
     private String model;
@@ -47,10 +47,10 @@ public class Phonepojo {
         this.brand = brand;
     }
 
-    public Phonepojo() {
+    public PhoneEntity() {
     }
 
-    public Phonepojo(String id, String prive, String model, String brand) {
+    public PhoneEntity(String id, String prive, String model, String brand) {
         this.id = id;
         this.prive = prive;
         this.model = model;
