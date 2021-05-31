@@ -1,9 +1,4 @@
-package com.singerw.book.test;
-
-import com.singerw.book.dao.BookDao;
-import com.singerw.book.entity.BookEntity;
-
-import java.util.ArrayList;
+package com.singerw.map.book.test;
 
 /**
  * @ClassName: BookTest
@@ -12,12 +7,12 @@ import java.util.ArrayList;
  * @Date: 2021-05-29 22:16
  * @Version: 1.0
  */
-public class BookTest {
+/*public class BookTest {
     public static void main(String[] args) {
         // 实例化BookDao对象
         BookDao bookDao = new BookDao();
         // 定义一个集合用于存放
-        ArrayList<BookEntity> list = new ArrayList<>();
+        BookDao map = new HashMap<String,>();
 
 
         // 1、添加操作
@@ -96,4 +91,4 @@ public class BookTest {
 
     }
 
-}
+}*/

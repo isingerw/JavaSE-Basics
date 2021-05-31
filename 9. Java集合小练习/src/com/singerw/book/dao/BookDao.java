@@ -22,15 +22,15 @@ public class BookDao {
     // 增加、删除、修改、查询操作
 
     /**
+     * @param book
+     * @return
      * @Author: CodeSleep
      * @Date: 2021-05-29 22:43
      * @Description: //TODO 添加书
-     * @param book
-     * @return
      */
-    public boolean addBook(BookEntity book){
+    public boolean addBook(BookEntity book) {
         //条件判断
-        if (book == null){
+        if (book == null) {
             return false;
         }
         list.add(book);
@@ -38,17 +38,17 @@ public class BookDao {
     }
 
     /**
+     * @param id
+     * @return
      * @Author: CodeSleep
      * @Date: 2021-05-29 22:49
      * @Description: //TODO 查找并删除书
-     * @param id
-     * @return
      */
-    public boolean deleteBook(String id){
+    public boolean deleteBook(String id) {
         for (int i = 0; i < list.size(); i++) {
             // 将集合中已存在的元素，临时变量赋值给find
             BookEntity find = list.get(i);
-            if (id.equals(find.getBookid())){
+            if (id.equals(find.getBookid())) {
                 // 如果找到了删除这个元素
                 list.remove(i);
                 // 删除后，执行到return，方法体结束
@@ -60,17 +60,17 @@ public class BookDao {
     }
 
     /**
+     * @param id
+     * @return
      * @Author: CodeSleep
      * @Date: 2021-05-29 22:55
      * @Description: //TODO 查找元素并返回查找结果
-     * @param id
-     * @return
      */
-    public BookEntity getBookById(String id){
+    public BookEntity getBookById(String id) {
         for (int i = 0; i < list.size(); i++) {
             // 将集合中已存在的元素，赋值给临时变量find
             BookEntity find = list.get(i);
-            if (id.equals(find.getBookid())){
+            if (id.equals(find.getBookid())) {
                 // 如果找到了这个元素返回这个元素，方法体结束
                 return find;
             }
@@ -81,29 +81,34 @@ public class BookDao {
 
     /**
      * @Author: CodeSleep
-     * @Date: 2021-05-29 23:04
+     * @Date: 2021-05-31 9:27
      * @Description: //TODO 查找并修改集合中的元素
-     * @param id
+     * @param book
      * @return
      */
-    public BookEntity updateBookById(String id){
+    public boolean updateBook(BookEntity book) {
+        // 根据id查询是否包含这个p对象
         for (int i = 0; i < list.size(); i++) {
-            // 将结合中已存在的元素，赋值给临时变量find
+            // 集合中的元素 赋值给临时变量 find
             BookEntity find = list.get(i);
-            if (id.equals(find.getBookid())){
-                return find;
+            if (book.getBookid().equals(find.getBookid())) {
+                //用新的 p对象 把 pfind给替换掉
+                list.set(i, book);
+                // 如果执行到了return 那么方法结束
+                return true;
             }
         }
-        return null;
+        // 修改失败
+        return false;
     }
 
     /**
+     * @return
      * @Author: CodeSleep
-     * @Date: 2021-05-29 23:03
-     * @Description: //TODO 返回集合中所有的元素
-     * @return list
+     * @Date: 2021-05-30 16:18
+     * @Description: //TODO
      */
-    public ArrayList<BookEntity> getBookList(){
+    public ArrayList<BookEntity> getBookList() {
         return list;
     }
 }

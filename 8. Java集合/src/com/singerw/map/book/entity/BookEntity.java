@@ -1,4 +1,4 @@
-package com.singerw.book.entity;
+package com.singerw.map.book.entity;
 
 /**
  * @ClassName: BookEntity
