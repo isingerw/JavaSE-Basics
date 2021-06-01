@@ -16,4 +16,5 @@ public class TestCollections {
         List list = new ArrayList();
         Collections.addAll(list, "xyz", "you", "abc");
     }
+
 }
