@@ -1,5 +1,21 @@
 # JavaSE基础代码
 
+<p align="center">
+    <a href="https://github.com/isingerw/JavaSE-Basics/issues">
+        <img src="https://img.shields.io/github/issues/isingerw/JavaSE-Basics?style=for-the-badge">
+    </a>
+    <a href="https://github.com/isingerw/JavaSE-Basics/blob/master/LICENSE">
+        <img src="https://img.shields.io/github/license/isingerw/JavaSE-Basics?style=for-the-badge">
+    </a>
+    <a href="https://github.com/isingerw/JavaSE-Basics/stargazers">
+        <img src="https://img.shields.io/github/forks/isingerw/JavaSE-Basics?style=for-the-badge">
+    </a>
+        <a href="https://github.com/isingerw/JavaSE-Basics/network/members">
+        <img src="https://img.shields.io/github/stars/isingerw/JavaSE-Basics?style=for-the-badge">
+    </a>
+</p>
+
+
 
 ## 目录
 
@@ -19,3 +35,4 @@ docs:
 └深入理解 Java 异常.md
 
 ```
+
