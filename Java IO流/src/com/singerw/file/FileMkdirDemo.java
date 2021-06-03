@@ -2,13 +2,12 @@ package com.singerw.file;
 
 import java.io.File;
 
-
 /**
  * @ClassName: FileMkdirDemo
  * @Description: //TODO ¿‡√Ë ˆ
  * @Author: CodeSleep
  * @Date: 2021-06-02 11:23
- * @Version: 1.0
+ * @Version: 2.0
  */
 public class FileMkdirDemo {
     public static void main(String[] args) {
