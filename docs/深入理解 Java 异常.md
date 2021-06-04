@@ -2,17 +2,13 @@
 
 [TOC]
 
-> 📓 本文已归档到：「[javacore](https://github.com/dunwu/javacore)」
->
-> 🔁 本文中的示例代码已归档到：「[javacore](https://github.com/dunwu/javacore/tree/master/codes/javacore-basics/src/main/java/io/github/dunwu/javacore/exception)」
-
-
-
 > 本文转载自：
 >
 > 作者：[静默虚空](http://www.cnblogs.com/jingmoxukong/)
 >
 > 文章：[https://www.cnblogs.com/jingmoxukong/p/12049374.html ](https://www.cnblogs.com/jingmoxukong/p/12049374.html)
+>
+> 并加入本人修改和总结
 
 
 
@@ -24,7 +20,7 @@
 
 `Throwable` 包含了其线程创建时线程执行堆栈的快照，它提供了 `printStackTrace()` 等接口用于获取堆栈跟踪数据等信息。
 
-主要方法：
+**主要方法：**
 
 - `fillInStackTrace` - 用当前的调用栈层次填充 `Throwable` 对象栈层次，添加到栈层次任何先前信息中。
 - `getMessage` - 返回关于发生的异常的详细信息。这个消息在 `Throwable` 类的构造函数中初始化了。
@@ -33,7 +29,13 @@
 - `printStackTrace` - 打印 `toString()` 结果和栈层次到 `System.err`，即错误输出流。
 - `toString` - 使用 `getMessage` 的结果返回代表 `Throwable` 对象的字符串。
 
+**三种类型的异常：**
 
+* 检查性异常（`CheckedException`）：最具代表的检查性异常是用户错误或问题引起的异常，这是程序员无法预见的。例如要打开一个不存在文件时，一个异常就发生了，这些异常在编译时不能被简单地忽略。
+* 运行时异常（`RuntimeException`）： 运行时异常是可能被程序员避免的异常。与检查性异常相反，运行时异常可以在编译时被忽略。
+* 错误（`Error`）： 错误不是异常，而是脱离程序员控制的问题。错误在代码中通常被忽略。例如，当栈溢出时，一个错误就发生了，它们在编译也检查不到的。
+
+<img src="https://singerwimg-1300001977.cos.ap-beijing.myqcloud.com/2021/06/01/4e7d0d1b7a229.png" style="zoom:80%;" />
 
 ### 1.2. Error
 
@@ -51,7 +53,7 @@
 
 ### 1.3. Exception
 
-`Exception` 是 `Throwable` 的一个子类。**`Exception` 表示合理的应用程序可能想要捕获的条件。**
+`Exception` 是 `Throwable` 的一个子类。**`Exception` 表示合理的应用程序可能想要捕获的条件，包括编译期异常和运行期异常**
 
 **编译器会检查 `Exception` 异常。**此类异常，要么通过 `throws` 进行声明抛出，要么通过 `try catch` 进行捕获处理，否则不能通过编译。
 
@@ -81,11 +83,21 @@ public class ExceptionDemo {
 Error:(7, 47) java: 未报告的异常错误java.lang.NoSuchMethodException; 必须对其进行捕获或声明以便抛出
 ```
 
+`CheckedException`异常和`RuntimeException` 异常的区别：
+
+* 运行时异常：包括`RuntimeException`及其所有子类。不要求程序必须对它们作出处理，比如`InputMismatchException`、`ArithmeticException`、`NullPointerException`等。即使没有使用`try-catch`或`throws`进行处理，仍旧可以进行编译和运行。如果运行时发生异常，会输出异常的堆栈信息并中止程序执行。
+* `Checked`异常（非运行时异常）：除了运行时异常外的其他异常类都是`Checked`异常。程序必须捕获或者声明抛出这种异常，否则出现编译错误，无法通过编译。处理方式包括两种：通过`try-catch`捕获异常，通过`throws`声明抛出异常从而交给上一级调用方法处理。
+* **简言之就是Checked必须捕获异常而运行期不用，RuntimeException异常多说明，程序员的代码能力太low**
 
 
-### 1.4. RuntimeException
 
-`RuntimeException` 是 `Exception` 的一个子类。`RuntimeException` 是那些可能在 Java 虚拟机正常运行期间抛出的异常的超类。
+
+
+### 1.4. RuntimeException运行时异常
+
+
+
+`RuntimeException` 也叫 `Unchecked Exception` 是 `Exception` 的一个子类。`RuntimeException` 是那些可能在 Java 虚拟机**正常运行期间**抛出的异常的超类。
 
 **编译器不会检查 `RuntimeException` 异常。**当程序中可能出现这类异常时，倘若既没有通过 `throws` 声明抛出它，也没有用 `try catch` 语句捕获它，程序还是会编译通过。
 
@@ -128,44 +140,27 @@ Exception in thread "main" java.lang.ArithmeticException: / by zero
 
 
 
-## 二、自定义异常
+### 1.5. CheckedException已检查异常
 
-**自定义一个异常类，只需要继承 `Exception` 或 `RuntimeException` 即可。**
+非运行时异常或已检查异常，要么使用try-catch语句进行捕获，要么用throws子句抛出，否则编译无法通过。
 
-示例：
-
-```java
-public class MyExceptionDemo {
-    public static void main(String[] args) {
-        throw new MyException("自定义异常");
-    }
-
-    static class MyException extends RuntimeException{
-        public MyException(String message){
-            super(message);
-        }
-    }
-}
-```
-
-输出：
-
-```
-Exception in thread "main" com.singerw.myexception.MyExceptionDemo$MyException: 自定义异常
-	at com.singerw.myexception.MyExceptionDemo.main(MyExceptionDemo.java:11)
-```
+* `IOException` 文件异常
+* `SQLException` SQL异常
+* 用户自定义的`Exception` 异常
 
 
 
-## 三、抛出异常
 
-### 3.1 throw和throws
+
+## 二、抛出异常
+
+**在执行一个方法时，如果发生异常，则这个方法生成代表该异常的一个对象，停止当前执行路径，并把异常对象提交给JRE**
+
+### 2.1 throw
 
 如果想在程序中明确地抛出异常，需要用到 `throw` 和 `throws` 。
 
 如果一个方法没有捕获一个检查性异常，那么该方法必须使用 `throws` 关键字来声明。`throws` 关键字放在方法签名的尾部。
-
-
 
 `throw` 示例：
 
@@ -192,6 +187,8 @@ java.lang.RuntimeException: 抛出一个异常
 ```
 
 
+
+### 2.2 throws
 
 也可以使用 `throw` 关键字抛出一个异常，无论它是新实例化的还是刚捕获到的。
 
@@ -245,7 +242,9 @@ java.lang.NoSuchMethodException: java.lang.String.toString(int)
 
 
 
-## 四、捕获异常
+## 三、捕获异常
+
+**JRE得到该异常后，寻求对应的代码来处理该异常，JRE在方法的调用栈中查找，从生成异常的方法开始回溯，直到找到相应的异常处理代码为止。**
 
 **使用 try 和 catch 关键字可以捕获异常**。`try catch` 代码块放在异常可能发生的地方。
 
@@ -275,9 +274,9 @@ try {
 }
 ```
 
-- `try` - **`try` 语句用于监听。将要被监听的代码(可能抛出异常的代码)放在 `try` 语句块之内，当 `try` 语句块内发生异常时，异常就被抛出。**
-- `catch` - `catch` 语句包含要捕获异常类型的声明。当保护代码块中发生一个异常时，`try` 后面的 `catch` 块就会被检查。
-- `finally` - **`finally` 语句块总是会被执行，无论是否出现异常。**`try catch` 语句后不一定非要`finally` 语句。`finally` 常用于这样的场景：由于`finally` 语句块总是会被执行，所以那些在 `try` 代码块中打开的，并且必须回收的物理资源(如数据库连接、网络连接和文件)，一般会放在`finally` 语句块中释放资源。
+- `try` ： **`try` 语句用于监听。将要被监听的代码(可能抛出异常的代码)放在 `try` 语句块之内，当 `try` 语句块内发生异常时，异常就被抛出。**
+- `catch` ： `catch` 语句包含要捕获异常类型的声明。当保护代码块中发生一个异常时，`try` 后面的 `catch` 块就会被检查，子类的异常在父类前面。
+- `finally` ： **`finally` 语句块总是会被执行，无论是否出现异常。**`try catch` 语句后不一定非要`finally` 语句。`finally` 常用于这样的场景：由于`finally` 语句块总是会被执行，所以那些在 `try` 代码块中打开的，并且必须回收的物理资源(如数据库连接、网络连接和文件)，一般会放在`finally` 语句块中释放资源。
 - `try`、`catch`、`finally` 三个代码块中的局部变量不可共享使用。
 - `catch` 块尝试捕获异常时，是按照 `catch` 块的声明顺序从上往下寻找的，一旦匹配，就不会再向下执行。因此，如果同一个 `try` 块下的多个 `catch` 异常类型有父子关系，应该将子类异常放在前面，父类异常放在后面。
 
@@ -306,6 +305,37 @@ public class TryCatchFinallyDemo {
 出现异常了：java.lang.ArithmeticException: / by zero
 不管是否出现异常，都执行此代码
 ```
+
+
+
+## 四、自定义异常
+
+**自定义一个异常类，只需要继承 `Exception` 或 `RuntimeException` 即可。**
+
+示例：
+
+```java
+public class MyExceptionDemo {
+    public static void main(String[] args) {
+        throw new MyException("自定义异常");
+    }
+
+    static class MyException extends RuntimeException{
+        public MyException(String message){
+            super(message);
+        }
+    }
+}
+```
+
+输出：
+
+```
+Exception in thread "main" com.singerw.myexception.MyExceptionDemo$MyException: 自定义异常
+	at com.singerw.myexception.MyExceptionDemo.main(MyExceptionDemo.java:11)
+```
+
+
 
 
 
@@ -481,7 +511,7 @@ public class ExceptionOverrideDemo {
 
 
 
-## 九、小结
+## 九、异常小结
 
 ![](https://singerwimg-1300001977.cos.ap-beijing.myqcloud.com/2021/06/01/e3b375103d027.png)
 
