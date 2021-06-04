@@ -6,19 +6,19 @@ import java.io.File;
  * @ClassName: FileDemo04
  * @Description: //TODO 层级遍历，遍历目录和子目录及其文件
  * @Author: CodeSleep
- * @Date: 2021-06-02 14:02
+ * @Date: 2021-06-04 16:49
  * @Version: 1.0
  */
 public class FileDemo04 {
     public static void main(String[] args) {
-        File file = new File("C:\\Windows");
+        File file = new File("I:\\IDEA2019_Project\\JavaSE基础");
         // 调用方法
         showsFile(file);
     }
 
     /**
      * @Author: CodeSleep
-     * @Date: 2021-06-02 14:29
+     * @Date: 2021-06-04 16:50
      * @Description: //TODO 遍历file路径下的文件和目录
      * @param file
      */

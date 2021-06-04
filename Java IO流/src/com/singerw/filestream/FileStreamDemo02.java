@@ -3,14 +3,10 @@ package com.singerw.filestream;
 import java.io.*;
 
 /**
- * @ClassName: FileStreamDemo
- * @Description: //TODO FileOutputStream 和 FileInputStream 文件读写示例
- * 1. 使用 File 类绑定一个文件。
- * 2. 把 File 对象绑定到流对象上。
- * 3. 进行读或写操作。
- * 4. 关闭流
+ * @ClassName: FileStreamDemo02
+ * @Description: //TODO 文件读写示例
  * @Author: CodeSleep
- * @Date: 2021-06-03 15:37
+ * @Date: 2021-06-04 16:46
  * @Version: 1.0
  */
 public class FileStreamDemo02 {
@@ -23,7 +19,7 @@ public class FileStreamDemo02 {
 
     /**
      * @Author: CodeSleep
-     * @Date: 2021-06-03 15:38
+     * @Date: 2021-06-04 16:45
      * @Description: //TODO 文件写入操作
      * @param filepath
      * @throws IOException
@@ -49,7 +45,7 @@ public class FileStreamDemo02 {
 
     /**
      * @Author: CodeSleep
-     * @Date: 2021-06-03 15:38
+     * @Date: 2021-06-04 16:45
      * @Description: //TODO 文件读取操作
      * @param filepath
      * @throws IOException

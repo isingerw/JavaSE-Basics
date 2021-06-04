@@ -40,7 +40,4 @@ public class CopyDemo1 {
         fis.close();
 
     }
-
-
-
 }
