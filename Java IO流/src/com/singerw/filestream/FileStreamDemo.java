@@ -15,9 +15,8 @@ import java.io.*;
  */
 public class FileStreamDemo {
     public static void main(String[] args) throws Exception {
-        FileStreamDemo streamDemo = new FileStreamDemo();
-        streamDemo.write("G:\\IOtest\\temp\\test.zip");
-        streamDemo.read("G:\\IOtest\\IOtest.zip");
+        write("G:\\IOtest\\temp\\test.zip");
+        read("G:\\IOtest\\IOtest.zip");
     }
 
 
@@ -28,7 +27,7 @@ public class FileStreamDemo {
      * @param filepath
      * @throws IOException
      */
-    public void write(String filepath) throws IOException {
+    public static void write(String filepath) throws IOException {
         // 第1步、使用File类找到一个文件
         File files = new File(filepath);
 
@@ -53,7 +52,7 @@ public class FileStreamDemo {
      * @param filepath
      * @throws IOException
      */
-    public void read(String filepath) throws IOException {
+    public static void read(String filepath) throws IOException {
         // 第1步、使用File类找到一个文件
         File files = new File(filepath);
 

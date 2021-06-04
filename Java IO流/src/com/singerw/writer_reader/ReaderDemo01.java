@@ -16,8 +16,8 @@ public class ReaderDemo01 {
         FileReader reader = new FileReader("I:\\IDEA2019_Project\\JavaSE基础\\Java IO流\\src\\resources\\docs\\singer.txt");
         File file = new File("I:\\IDEA2019_Project\\JavaSE基础\\Java IO流\\src\\resources\\docs\\singer.txt");
 
-        char[] cbuf = new char[(int)file.length()];
-        reader.read(cbuf,0, (int)cbuf.length);
+        char[] buff = new char[(int)file.length()];
+        reader.read(buff,0, (int)buff.length);
         System.out.println();
     }
 }
